@@ -39,6 +39,7 @@ const Home = () => {
       if (result?.success) {
         getWorkspaces()
         setShowModal(false)
+        setWorkspace('')
       }
       console.log('addWorkspace ', result);
     } catch (error) {
@@ -55,6 +56,7 @@ const Home = () => {
       const result = await put({ endpoint: `workspaces/update/${workspaceDetails?._id}`, body })
       if (result?.success) {
         setShowModal(false)
+        setWorkspace('')
         getWorkspaces()
       }
       console.log('updateWorkspace ', result);
@@ -107,7 +109,7 @@ const Home = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="exampleModalScrollableTitle">{isAddModal ? 'Add' : 'Edit'}</h1>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => setShowModal(false)}></button>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => {setShowModal(false); setWorkspace('')}}></button>
             </div>
             <div className="modal-body">
               <label htmlFor="board" className="form-label">workspace</label>

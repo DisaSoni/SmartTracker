@@ -149,6 +149,9 @@ const Board = () => {
             if (result?.success) {
                 getLists()
                 setShowAddBugModal(false)
+                setTitle(''); 
+                setDescription(''); 
+                setPriority('')
             }
             console.log('addBug ', result);
         } catch (error) {
@@ -179,6 +182,7 @@ const Board = () => {
             if (result?.success) {
                 getLists()
                 setShowAddListModal(false)
+                setName('')
             }
             console.log('addList ', result);
         } catch (error) {
@@ -195,6 +199,7 @@ const Board = () => {
             if (result?.success) {
                 getLists()
                 setShowAddListModal(false)
+                setName('')
             }
             console.log('addList ', result);
         } catch (error) {
@@ -236,7 +241,7 @@ const Board = () => {
         <>
             <div className='my-5'>
                 <div className='d-flex align-items-center justify-content-between'>
-                    <h1 className='mx-5'>Smart Tracker</h1>
+                    <h1 className='mx-5'>{state?.board?.name}</h1>
                     <div className='me-5 d-flex'>
                         {!isViewer(user?.type) && <button className='btn btn-info' onClick={() => { setIsShowAddListModal(true); setShowAddListModal(true) }}>+ Add List</button>}
                         <div className="dropdown ms-2">
@@ -332,7 +337,7 @@ const Board = () => {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h1 className="modal-title fs-5" id="exampleModalScrollableTitle">Add</h1>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => setShowAddBugModal(false)}></button>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => { setShowAddBugModal(false); setTitle(''); setDescription(''); setPriority('') }}></button>
                         </div>
                         <div className="modal-body">
                             <label htmlFor="title" className="form-label">Title</label>
@@ -359,7 +364,7 @@ const Board = () => {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h1 className="modal-title fs-5" id="exampleModalScrollableTitle">{isShowAddListModal ? 'Add' : 'Edit'}</h1>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => setShowAddListModal(false)}></button>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => { setShowAddListModal(false); setName('') }}></button>
                         </div>
                         <div className="modal-body">
                             <label htmlFor="name" className="form-label">name</label>

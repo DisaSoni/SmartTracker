@@ -73,6 +73,7 @@ const Boards = () => {
             if (result?.success) {
                 getBoards()
                 setShowModal(false)
+                setBoard('')
             }
             console.log('addBoard ', result);
         } catch (error) {
@@ -91,6 +92,7 @@ const Boards = () => {
             const result = await put({ endpoint: `boards/update/${boardDetails?._id}`, body })
             if (result?.success) {
                 setShowModal(false)
+                setBoard('')
                 getBoards()
             }
             console.log('starBoard ', result);
@@ -145,7 +147,7 @@ const Boards = () => {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h1 className="modal-title fs-5" id="exampleModalScrollableTitle">{isAddModal ? 'Add' : 'Edit'}</h1>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => setShowModal(false)}></button>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={() => {setShowModal(false); setBoard('')}}></button>
                         </div>
                         <div className="modal-body">
                             <label htmlFor="board" className="form-label">Board</label>
