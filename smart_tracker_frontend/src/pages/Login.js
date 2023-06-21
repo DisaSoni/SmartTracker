@@ -49,7 +49,7 @@ const Login = () => {
           <img src='./smart-tracker.png' className='logo' />
         </div>
         <div className='col-md-6 right-part'>
-          <div className='card auth-card'>
+          <div className='card auth-card p-5'>
             <h2>Welcome!</h2>
             {error && <div className="alert alert-danger p-2" role="alert">
               {error}

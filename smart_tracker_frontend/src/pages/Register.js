@@ -48,7 +48,7 @@ const Register = () => {
                     <img src='./smart-tracker.png' className='logo' />
                 </div>
                 <div className='col-md-6 right-part'>
-                    <div className='card auth-card'>
+                    <div className='card auth-card p-5'>
                         <h2>Welcome aboard!</h2>
                         {success && <div className="alert alert-success p-2" role="alert">
                             {success}

@@ -53,10 +53,9 @@ body {
 }
 
 .auth-card {
-    width: 70%;
+    width: 80%;
     background-color: var(--secondary-color);
     text-align: center;
-    padding: 50px 80px;
     border-radius: 10px;
     color: #fff;
 }
