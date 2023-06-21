@@ -1,0 +1,19 @@
+.divider {
+    margin: 5px;
+}
+
+.time,
+em{
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+.reply {
+    font-size: small;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.reply-comment{
+    font-size: smaller;
+}

@@ -1,0 +1,19 @@
+.bug-card {
+    background-color: #151521;
+    color: var(--font-color-light);
+}
+
+.view-icon,
+.trash-icon {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.trash-icon{
+    background-color: #E2524E;
+}

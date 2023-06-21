@@ -1,0 +1,6 @@
+@import './../../utils/css/constants.css';
+
+.board-card {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
