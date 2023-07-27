@@ -43,4 +43,4 @@ The SmartTracker (Bug Tracker) is a comprehensive web application designed to st
 -React.js
 
 
-By combining the power of the MERN stack and incorporating these essential features, SmartTracker aims to become an indispensable tool for software development teams of all sizes, significantly improving the development lifecycle and team collaboration.
+
